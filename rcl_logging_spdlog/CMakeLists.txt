@@ -29,7 +29,7 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 add_library(${PROJECT_NAME} src/rcl_logging_spdlog.cpp)
-target_link_libraries(${PROJECT_NAME} PRIVATE
+target_link_libraries(${PROJECT_NAME} PUBLIC
   rcpputils::rcpputils
   rcutils::rcutils
   spdlog::spdlog)
